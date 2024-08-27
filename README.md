@@ -1,6 +1,9 @@
-# Project Title
+# Fake Reviews Classifier Project
 
-Fake Reviews classifier project
+Steps:
+
+1) Build fake review classifier
+2) Create simple app to return a score based on veridicity of reviews of certain locations
 
 ## Installation
 
