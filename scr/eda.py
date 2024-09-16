@@ -3,6 +3,10 @@ import pandas as pd
 from pandas import DataFrame
 from matplotlib.figure import Figure
 from datasets import load_dataset
+import os
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
+
 
 def download_data(dataset_name: str) -> pd.DataFrame:
     """
@@ -31,9 +35,7 @@ def generate_figures(df: DataFrame, review_column: str = 'text', img_dir: str = 
     Returns:
     List[Figure]: A list of the generated figures.
     """
-    import os
-    import matplotlib.pyplot as plt
-    from wordcloud import WordCloud
+    img_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), img_dir)
 
     # Ensure the img_dir exists
     if not os.path.exists(img_dir):
@@ -57,6 +59,7 @@ def generate_figures(df: DataFrame, review_column: str = 'text', img_dir: str = 
     plt.close(fig2)
 
     return [fig1, fig2]
+
 
 if __name__ == "__main__":
     # Your code here
