@@ -17,5 +17,3 @@ def test_huggingface_connection():
         logger.info("Test passed: Hugging Face connection is working.")
     except AssertionError as ae:
         logger.error(f"Test failed: {ae}")
-    except Exception as e:
-        logger.error(f"Error during test: {e}")
